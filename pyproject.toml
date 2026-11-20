@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "android-process-death-check"
+version = "0.1.0"
+description = "Exercise Android app cold relaunch and process-death state restoration with adb."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["android", "compose", "process-death", "state-restoration", "adb", "instrumentation-testing", "testing"]
+authors = [{ name = "Niko Filipic" }]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/buxerr/android-process-death"
+Issues = "https://github.com/buxerr/android-process-death/issues"
+
+[project.scripts]
+android-process-death-check = "android_process_death.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
